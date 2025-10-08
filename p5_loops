@@ -1,0 +1,65 @@
+# notes from the youtube vedio
+#using loops with lists
+fruit_basket =["🍎", "🍌", "🫐"]
+for fruit in fruit_basket:
+    print (f"the fruit is {fruit}")
+    #any thing i write here will be the ptinted one for each item 
+#3. ENUMERATE bulid in function to know the indix the item we are curratly iterating on
+
+fruit_basket =["🍎", "🍌", "🫐"]
+# we have two values we want to know the i index and the fruit type. and break them by ,
+for i, fruit in enumerate (fruit_basket):
+    print (f"the fruit is {fruit} is at {i}")
+
+# looping with range
+#if want to run a code for ex 10 times 
+for i in range (10):
+    print(f"looping {i} times")
+
+#it can take 3 arguments 
+#here from 10 to 20 counting by 2. it can also type backwords with -1
+for i in range (0,5, 1):
+    print(f"looping {i} times")
+
+
+#5. while loops (game loop) : iterates based on some condition.and it will continue to iterate as long as that condition is true. 
+#Useful for situations where you don’t know beforehand how many times to loop.
+#Stop with Ctrl + C in terminal.
+while True:
+    print("this will loop forever")
+    break #break the loop so it will not run forever
+print("back") # out of the loop it will run normal
+
+
+count = 0
+while True:
+    count +=1
+    print (f"we are loopin {count} time")
+
+    if count >= 5:
+        break
+
+
+
+#6. continue key word : skips current iteration and goes back to start of loop. 
+count = 0
+while True:
+    count +=1
+    if count ==3:
+        continue
+
+    print (f"we are loopin {count} time")
+
+    if count >= 5:
+        break
+
+
+
+
+# more logical condition
+
+count = 0
+while count < 5:
+    count +=1
+    print (count)
+  

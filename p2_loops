@@ -63,3 +63,52 @@ while count < 5:
     count +=1
     print (count)
   
+
+
+# BEFORE IT WAS NOTES FROM LEACTURES HERE STARTS THE NOTES FROM THE PRACRICAL 2
+   
+my_list=["a" , "list" , "can" , "contain" , "string" , "and" , "numbers" , 2]
+
+
+print (my_list)
+type(my_list) #this not working
+print (my_list[0]) # print the first item in your list
+print (type(my_list)) #this works 
+
+#3.1 simple loops
+my_list= [" person" , "apples" , "what" , "cat" , "dog" , "banana" , " here"] 
+
+for i, items in enumerate (my_list):
+    print (f"we have a/an {items} in the list  at indix number {i}")
+    if i == 5:
+        break
+
+
+#3.2 nested loops
+
+sequences = ['ATCTGAGTCCACACATG', 'GCGTCGTGCGATGTTCACGTTGAT', 'CAGTAGTACTCAGT', 'GGTATGCTAGACGAGATCTAATA']
+codons = ['CCA', 'TGT', 'GTA', 'TAG']
+start_codon = ["ATG"]
+stop_codons = ["TAA", "TAG", "TGA"]
+
+for sequence in sequences:
+  for codon in codons:
+    if codon in sequence:
+      print(f"{codon}  is in  {sequence} ")
+
+#3.2.1
+for seq in sequences:
+    for scodons in start_codon:
+        for stcodons in stop_codons:
+            if scodons in seq and stcodons in seq:
+              print (f"{scodons} (start) and {stcodons} (stop) are in {seq} ")
+
+#3.2.2
+for seq in sequences:
+    for scodons in start_codon:
+        for stcodons in stop_codons:
+            if scodons in seq and stcodons in seq:
+                start_index = seq.find(scodons)
+                stop_index = seq.find(stcodons)
+                if start_index < stop_index:
+                    print(f"{scodons} comes before {stcodons} in {seq}")

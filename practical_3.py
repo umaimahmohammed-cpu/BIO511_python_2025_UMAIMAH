@@ -59,4 +59,52 @@ print (summary)
 
 
 
+#4.3
+
+#C) Aggregate with mode  (uses nums, limit, result)
+# Goal: nested decisions based on a mode string. Return one final value.
+
+# a) Define a function named aggregate that takes three arguments: seq, mode, threshold.
+def function_agg(seq, mode, threshold):
+    result = None # b) Inside the function, create a LOCAL variable named result.
+    if mode == "sum": # - if mode is "sum": start at 0
+        result = 0
+    elif mode =="count": # - if mode is "count": start at 0
+        result = 0
+    else:
+        result = None # #       - if mode is "max": start at None (meaning “no qualifying value yet”)
+    for n in seq:# c) Loop through each number n in seq:
+        if n < 0:
+            continue #       - First, ignore n if it is negative (skip it).(USE CONTINUE)
+        if n >= threshold:#       - If n is at least threshold, then:
+
+            if mode == "sum":#           * if mode is "sum": 
+                result += n # add n to result
+            elif mode =="count":#           * elif mode is "count":
+                result += 1 #increase result by 1
+            else:
+                if result is None or n > result:
+                    result = n 
+return result
+
+            
+
+
+
+ 
+#           * else (treat any other mode as "max"):
+#                 if result is None or n is greater than result, update result to n
+
+# d) Return the result.
+
+# e) Outside the function:
+#    - Print the GLOBAL result.
+#    - Call and print each of these:
+#         aggregate(nums, "sum", limit)
+#         aggregate(nums, "count", limit)
+#         aggregate(nums, "max", limit)
+#    - Print the GLOBAL result again.
+
+# Your Code below
+
 

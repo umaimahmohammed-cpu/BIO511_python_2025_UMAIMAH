@@ -17,7 +17,7 @@ result = "unset"
 
 # a to d
 def count_above(seq,lim):
-    count = 0
+    count = 0 # when do we put zero when when do we put non 
     for se in seq:
         if seq > lim:
             count + 1
@@ -27,7 +27,8 @@ def count_above(seq,lim):
 # e) Outside the function:
 #    - Print the GLOBAL count.
 print (count)
-#    - Call count_above(nums, limit) and print the returned number.
+#    - Call count_above(nums, limit) and print the returned number. 
+print (count_above)
 #    - Print the GLOBAL count again (notice the global didn’t change).
 print (count)
 
@@ -66,45 +67,38 @@ print (summary)
 
 # a) Define a function named aggregate that takes three arguments: seq, mode, threshold.
 def function_agg(seq, mode, threshold):
-    result = None # b) Inside the function, create a LOCAL variable named result.
-    if mode == "sum": # - if mode is "sum": start at 0
+    result = None           # b) Inside the function, create a LOCAL variable named result.
+    if mode == "sum":       # - if mode is "sum": start at 0
         result = 0
-    elif mode =="count": # - if mode is "count": start at 0
+    elif mode =="count":    # - if mode is "count": start at 0
         result = 0
     else:
-        result = None # #       - if mode is "max": start at None (meaning “no qualifying value yet”)
-    for n in seq:# c) Loop through each number n in seq:
+        result = None       # #       - if mode is "max": start at None (meaning “no qualifying value yet”)
+    for n in seq:           # c) Loop through each number n in seq:
         if n < 0:
-            continue #       - First, ignore n if it is negative (skip it).(USE CONTINUE)
-        if n >= threshold:#       - If n is at least threshold, then:
+            continue        #- First, ignore n if it is negative (skip it).(USE CONTINUE)
+        if n >= threshold:  # - If n is at least threshold, then:
 
-            if mode == "sum":#           * if mode is "sum": 
-                result += n # add n to result
-            elif mode =="count":#           * elif mode is "count":
-                result += 1 #increase result by 1
-            else:
-                if result is None or n > result:
+            if mode == "sum":                    # * if mode is "sum": 
+                result += n                       # add n to result
+            elif mode =="count":                  #* elif mode is "count":
+                result += 1                       #increase result by 1
+            else:                                 # * else (treat any other mode as "max"):
+
+                if result is None or n > result: # if result is None or n is greater than result, update result to n
                     result = n 
-return result
+    return result                                # d) Return the result.
 
-            
-
-
-
- 
-#           * else (treat any other mode as "max"):
-#                 if result is None or n is greater than result, update result to n
-
-# d) Return the result.
 
 # e) Outside the function:
 #    - Print the GLOBAL result.
+print (result)
 #    - Call and print each of these:
 #         aggregate(nums, "sum", limit)
+print (function_agg (nums, "sum", limit))
 #         aggregate(nums, "count", limit)
+print (function_agg (nums, "count", limit))
 #         aggregate(nums, "max", limit)
+print (function_agg (nums, "max", limit))
 #    - Print the GLOBAL result again.
-
-# Your Code below
-
-
+print (result)

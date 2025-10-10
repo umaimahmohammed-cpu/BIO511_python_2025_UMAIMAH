@@ -7,8 +7,9 @@
 # import subprocess slide 7
 #the most simple argument #import sys slide 8
 #import datetime slide 10
-import datetime
-datetime.datetime.now()
+
+#import datetime
+#datetime.datetime.now() # to know the time 
 
 
 #import jason # this is a file formate to orgnaze files  slide 11
@@ -23,6 +24,3 @@ datetime.datetime.now()
 
 #enviroment.yml #to make my code repreducable form others
 # add 
-
-
-

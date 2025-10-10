@@ -1,0 +1,13 @@
+#10 -10 -2025 python standers liberary 
+#import os slide 2
+#import globe slide 3
+#import csv  for tables slid 4
+# from pathlib import path slide 5
+#import shutil . have same overlab with os slide 6
+# import subprocess slide 7
+#the most simple argument #import sys slide 8
+#import datetime slide 10
+import datetime
+datetime.datetime.now()
+
+
